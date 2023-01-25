@@ -176,7 +176,9 @@ function decrypt_action(password_input, encrypted_content, decrypted_content) {
         // any post processing on the decrypted content should be done here
         
         
-        
+        document.getElementById("mkdocs-decrypted-content").querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
         
         return true
     } else {
